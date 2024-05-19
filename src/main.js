@@ -87,6 +87,10 @@ const search = async event => {
       // Show laod more btn
       ShowLoadMoreBtn(loadMoreBtn);
     }
+    if (totalPages === 1) {
+      // Show laod more btn
+      HideLoadMoreBtn(loadMoreBtn);
+    }
   } catch (error) {
     //  enable search button and hide loader
     EnableSearchBtn(searchBtn);
