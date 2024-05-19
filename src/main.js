@@ -113,7 +113,7 @@ const smoothScroll = () => {
   const photoPosHeight = lastEl.getBoundingClientRect().height;
   const scrollHeight = photoPosHeight * 2;
   window.scrollBy({
-    top: 1000,
+    top: scrollHeight,
     left: 0,
     behavior: 'smooth',
   });
