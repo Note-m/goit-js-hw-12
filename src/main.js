@@ -90,6 +90,10 @@ const search = async event => {
     if (totalPages === 1) {
       // Show laod more btn
       HideLoadMoreBtn(loadMoreBtn);
+      iziToast.error({
+        message:
+          'Sorry, there are no images matching your search query. Please try again!',
+      });
     }
   } catch (error) {
     //  enable search button and hide loader
@@ -148,7 +152,7 @@ const PressedBtmLoadMore = async event => {
     if (photosPage >= totalPages) {
       // Show laod more btn
       ShowLoadMoreBtn(loadMoreBtn);
-      loadMoreBtn.removeEventListener('click', onLoadMorePress);
+      loadMoreBtn.removeEventListener('click', PressedBtmLoadMore);
       iziToast.info({
         message: "We're sorry, but you've reached the end of search results.",
         position: 'topRight',
