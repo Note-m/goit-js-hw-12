@@ -151,7 +151,7 @@ const PressedBtmLoadMore = async event => {
     totalPages = Math.ceil(totalHits / PER_PAGE);
     if (photosPage >= totalPages) {
       // Show laod more btn
-      ShowLoadMoreBtn(loadMoreBtn);
+      HideLoadMoreBtn(loadMoreBtn);
       loadMoreBtn.removeEventListener('click', PressedBtmLoadMore);
       iziToast.info({
         message: "We're sorry, but you've reached the end of search results.",
